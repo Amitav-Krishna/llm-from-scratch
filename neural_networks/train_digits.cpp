@@ -104,10 +104,6 @@ int main() {
             continue;
         }
 
-        // Skip the header line if we haven't already
-        if (line_count == 1 && has_header) {
-            continue;
-        }
 
         try {
             // DEBUG: Show what we're parsing

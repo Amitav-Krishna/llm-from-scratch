@@ -1,6 +1,6 @@
 #ifndef VECTOR_HPP
 #define VECTOR_HPP
-
+#include <initializer_list>
 #include <stdexcept>
 #include <iostream>
 #include "random.hpp"
@@ -19,6 +19,7 @@ public:
     vectorClass() : capacity(1), current(0) {
         arr = new T[capacity];
     }
+
 
     vectorClass(const vectorClass& other) : capacity(other.capacity), current(other.current) {
         arr = new T[capacity];
@@ -78,11 +79,7 @@ public:
         return false;
     }
 
-    T& operator[](int index) {
-        if (index >= current || index < 0)
-            throw std::out_of_range("Index out of range");
-        return arr[index];
-    }
+    
 
     const T& operator[](int index) const {
         if (index >= current || index < 0)
@@ -124,7 +121,7 @@ public:
 };
 
 // ------------------- MATRIX -------------------
-#include <initializer_list>
+
 class matrix : public vectorClass<mathVector> {
 public:
     using vectorClass<mathVector>::vectorClass;
