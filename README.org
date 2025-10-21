@@ -1,0 +1,2 @@
+* Hello!
+This is a project in which I am developing an LLM from scratch. The actual programming aspect of this is currently on pause so that I can focus on [[https://amitav.net/roadmap-llm][writing]] [[https://amitav.net/building-lists][about]] [[https://amitav.net/building-vectors][it]].
