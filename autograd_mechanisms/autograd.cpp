@@ -1,7 +1,7 @@
 #ifndef AUTOGRAD_HPP
 #define AUTOGRAD_HPP
 
-#include "../phase_1/vector.hpp"
+#include "../math_primitives/vector.hpp"
 #include <functional>
 #include <iostream>
 #include <cmath>
@@ -12,7 +12,7 @@ struct Node {
     matrix value;
     matrix grad;
     std::function<void()> backward;
-    vectorClass<Node*> children;
+    MyList<Node*> children;
 
     Node() = default;
 

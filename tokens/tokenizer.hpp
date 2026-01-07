@@ -9,6 +9,6 @@
 #include "../math_primitives/vector.hpp"  // Or better: a vector.hpp
 
 // A function that reads a file and returns tokens
-vectorClass<vectorClass<char>> tokenizeFile(const std::string& filename);
+MyList<MyList<char>> tokenizeFile(const std::string& filename);
 
 #endif // TOKENIZER_HPP

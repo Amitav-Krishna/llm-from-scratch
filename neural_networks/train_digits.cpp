@@ -67,8 +67,8 @@ Node* forward(Node* x, Node* w1, Node* w2, Node* b1, Node* b2) {
 
 int main() {
     // BEGIN IMAGE FETCHING
-    vectorClass<matrix> images;
-    vectorClass<int> labels;
+    MyList<matrix> images;
+    MyList<int> labels;
 
     // Load MNIST data from CSV
     std::string csv_filename = "mnist.csv";
@@ -194,7 +194,7 @@ int main() {
     // END IMAGE FETCHING
 
     // BEGIN MODEL INITIALIZATION
-    vectorClass<matrix> target_vectors;
+    MyList<matrix> target_vectors;
 
     // Creates one-hot encodings of labels
     for (int i = 0; i < labels.size(); i++) {
@@ -224,7 +224,7 @@ int main() {
     b2->value.fill_zeroes();
     
     SGD optimizer(0.001f);
-    vectorClass<Node*> params;
+    MyList<Node*> params;
     params.push(w1);
     params.push(w2);
     params.push(b1);

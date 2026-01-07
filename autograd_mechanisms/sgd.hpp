@@ -11,7 +11,7 @@ public:
     SGD(float learning_rate) : lr(learning_rate) {}
 
     // Update parameters in-place
-    void step(vectorClass<Node*> params);
+    void step(MyList<Node*> params);
 };
 
 #endif

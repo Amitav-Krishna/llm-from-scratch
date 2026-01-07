@@ -9,8 +9,8 @@ int main() {
 		if (tokens.size() < 2) {
 				throw std::invalid_argument("Bi-gram requires at least 2 tokens");
 		}
-		vectorClass<vectorClass<vectorClass<char>>> pairs;
-		vectorClass<vectorClass<char>> pair;
+		MyList<MyList<MyList<char>>> pairs;
+		MyList<MyList<char>> pair;
 	  for (int i = 0; i < tokens.size()-1; i++) {
 				pair.push(tokens[i]);
 				pair.push(tokens[i+1]);
@@ -27,7 +27,7 @@ int main() {
 				}
 				std::cout << '\n';
 		}
-		vectorClass<int> counts;
+		MyList<int> counts;
 		for (int i = 0; i < pairs.size()-1; i++) {
 				counts.push(0);
 				for (int j = i+1; j < pairs.size(); j++) {

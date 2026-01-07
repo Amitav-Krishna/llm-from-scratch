@@ -11,7 +11,7 @@ struct Node {
     matrix value;
     matrix grad;
     std::function<void()> backward;
-    vectorClass<Node*> children;
+    MyList<Node*> children;
 
     Node() = default;
     explicit Node(const matrix& m);
